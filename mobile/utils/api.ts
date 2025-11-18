@@ -12,7 +12,6 @@ export const createApiClient = (
 
   api.interceptors.request.use(async (config) => {
     const token = await getToken();
-    console.log("TOKEN FROM CLERK:", token);
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
