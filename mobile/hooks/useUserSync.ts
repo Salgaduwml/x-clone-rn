@@ -9,8 +9,6 @@ export const useUserSync = () => {
 
   const syncUserMutation = useMutation({
     mutationFn: () => userApi.syncUser(api),
-    onSuccess: (response: any) =>
-      console.log("User synced successfully", response.data.user),
     onError: (error: any) => console.log("Error syncing user", error),
   });
 
