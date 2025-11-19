@@ -15,7 +15,7 @@ import { formatDate } from "@/utils/formatters";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 
 interface CommentsModelProps {
-  selectedPost: Post;
+  selectedPost: Post | null;
   onClose: () => void;
 }
 
