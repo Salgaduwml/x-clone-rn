@@ -9,7 +9,7 @@ export const useComments = () => {
 
   const queryClient = useQueryClient();
 
-  const createCommentMutaion = useMutation({
+  const createCommentMutation = useMutation({
     mutationFn: async ({
       postId,
       content,
@@ -34,13 +34,13 @@ export const useComments = () => {
       Alert.alert("Empty Comment", "Please write something before posting!");
       return;
     }
-    createCommentMutaion.mutate({ postId, content: commentText.trim() });
+    createCommentMutation.mutate({ postId, content: commentText.trim() });
   };
 
   return {
     commentText,
     setCommentText,
     createComment,
-    isCreating: createCommentMutaion.isPending,
+    isCreating: createCommentMutation.isPending,
   };
 };
