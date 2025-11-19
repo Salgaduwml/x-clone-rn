@@ -86,7 +86,7 @@ const CommentsModel = ({ selectedPost, onClose }: CommentsModelProps) => {
           {selectedPost.comments.map((comment) => (
             <View
               key={comment._id}
-              className="borde-b border-gray-100 bg-white px-5 py-4"
+              className="border-b border-gray-100 bg-white px-5 py-4"
             >
               <View className="flex-row">
                 <Image
@@ -99,7 +99,7 @@ const CommentsModel = ({ selectedPost, onClose }: CommentsModelProps) => {
                       {comment.user.firstName} {comment.user.lastName}
                     </Text>
                     <Text className="text-gray-500 ml-1">
-                      @{selectedPost.user.username}
+                      @{comment.user.username}
                     </Text>
                   </View>
                   <Text className="text-gray-900 text-base leading-5 mb-2">
