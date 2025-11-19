@@ -63,7 +63,7 @@ const NotificationCard = ({
             className="size-12 rounded-full"
           />
 
-          <View className="abolute -bottom-1 -right-1 size-6 bg-white items-center justify-center">
+          <View className="absolute -bottom-1 -right-1 size-6 bg-white items-center justify-center">
             {getNotificationIcon()}
           </View>
         </View>
