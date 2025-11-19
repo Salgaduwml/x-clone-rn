@@ -1,6 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Notification from "../models/notification.model.js";
 import User from "../models/user.model.js";
+import { getAuth } from "@clerk/express";
 
 export const getNotifications = asyncHandler(async (req, res) => {
   const { userId } = getAuth(req);
