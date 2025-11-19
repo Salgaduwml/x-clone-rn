@@ -21,7 +21,10 @@ interface CommentsModelProps {
 
 const CommentsModel = ({ selectedPost, onClose }: CommentsModelProps) => {
   const { currentUser } = useCurrentUser();
-  console.log({ currentUser });
+const CommentsModel = ({ selectedPost, onClose }: CommentsModelProps) => {
+  const { currentUser } = useCurrentUser();
+  const { commentText, setCommentText, createComment, isCreating } =
+    useComments();
   const { commentText, setCommentText, createComment, isCreating } =
     useComments();
 
